@@ -50,14 +50,20 @@ def detectTimeSlot(productUrl):
         num_refreshes += 1
       else:
         # soup.find returns None when element/tag is not found; that means we are already logged in.
-        # go to sign out page.
-        driver.get('https://www.freshdirect.com/logout.jsp?logoutPage=site_access')
-        #driver.find_element_by_link_text("Sign out").click()
-        #driver.find_element_by_xpath("//a[@class='cssbutton green transparent locabar-logout']").click()
-        ## click sign in link.
-        #driver.find_element_by_xpath("//a[@id='locabar_user_login_link']/div/div[2]/div/div[2]/strong").click()
-        # navigate to login page.
-        driver.get('https://www.freshdirect.com/login/login.jsp')
+        # avoid throwing an exception from driver.find_element_by_id by searching for the button before trying to click it.
+        found_sign_in_button = False
+        while not found_sign_in_button:
+          # go to sign out page.
+          driver.get('https://www.freshdirect.com/logout.jsp?logoutPage=site_access')
+          # navigate to login page.
+          driver.get('https://www.freshdirect.com/login/login.jsp')
+          html = driver.page_source
+          soup = bs4.BeautifulSoup(html, features='html.parser')
+          if soup.find('input', {'id': 'signinbtn'}):
+            found_sign_in_button = True
+          else:
+            if conf.getboolean('emit_debug_msg'):
+              print("Time slot table not found. Tried to sign out and sign back in at " + current_time() + '. Sign in button not found. Trying again.')
         # click sign in button to log in.
         # Chrome autofill/password manager will fill in the email and password.
         driver.find_element_by_id("signinbtn").click()
