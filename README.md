@@ -2,6 +2,7 @@
   * [Usage](#usage)
   * [Screenshots](#screenshots)
   * [Requests](#requests)
+  * [Issues](#issues)
   * [References](#references)
 
 # Grocery delivery software
@@ -25,10 +26,16 @@ The script works on **Chrome**.
 
 ## Requests
 
-1. Write Chrome extension so that users don't have to install Python locally and run the script from the command line.
-2. Add easy to use email and SMS server so that users don't have to set up their own.
-3. Add Amazon Fresh (maybe other delivery platforms?).
-4. Maybe write Android and iOS apps?
+1. Need much better documentation for how to install and configure. In particular, add structure and format of freshdirect_slot.ini.
+2. Write Chrome extension so that users don't have to install Python locally and run the script from the command line.
+3. Add easy to use email and SMS server so that users don't have to set up their own.
+4. Add ability to check out and pay for order, in addition to current alerting capability. That way user doesn't have to wake up or do anything in response to an alert. The program will just place the order when a slot comes available.
+4. Add Amazon Fresh (maybe other delivery platforms like Peapod, Instacart, Shipt, Walmart?).
+5. Maybe write Android and iOS apps?
+
+## Issues
+
+1. I am a FreshDirect Chef's Table customer, so I built the code in that environment. Does the reserve time slot page work if you are not Chef's Table? I don't know, but happy to work with someone who is not Chef's Table to troubleshoot and get it working in that environment.
 
 ## References
 
