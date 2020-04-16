@@ -21,8 +21,8 @@ def detectTimeSlot(productUrl):
   div_list = []
   time_slot_list = []
   while not found_open_slot:
-    if num_refreshes > conf['max_iterations_before_restart']:
-      if conf['emit_debug_msg']:
+    if num_refreshes > int(conf['max_iterations_before_restart']):
+      if conf.getboolean('emit_debug_msg'):
         print("Browser restarted at " + current_time())
       driver.close()
       driver = None
@@ -42,7 +42,7 @@ def detectTimeSlot(productUrl):
         # found sign in button, so it is initial log in.
         # click the sign in button (should already be populated by Chrome autofill/password manager.
         driver.find_element_by_id("signinbtn").click()
-        if conf['emit_debug_msg']:
+        if conf.getboolean('emit_debug_msg'):
           print("Signed in at " + current_time())
         # technically clicking the sign in button should bring us to the page we were originally requesting, but just safer to
         # explicitly load the page we want.
@@ -61,7 +61,7 @@ def detectTimeSlot(productUrl):
         # click sign in button to log in.
         # Chrome autofill/password manager will fill in the email and password.
         driver.find_element_by_id("signinbtn").click()
-        if conf['emit_debug_msg']:
+        if conf.getboolean('emit_debug_msg'):
           print("Time slot table not found, so signed out and then signed back in at " + current_time())
         # navigate to reservation page.
         driver.get(productUrl)
@@ -101,22 +101,22 @@ def detectTimeSlot(productUrl):
         # this prevents phantom time slots that just appear for a few seconds, and also lets us capture all the time slots rather
         # than hastily alerting to just one or a few.
         found_during_previous_iteration = True
-        if conf['emit_debug_msg']:
+        if conf.getboolean('emit_debug_msg'):
           print('Found time slots initially at ' + current_time() + '. sleeping for a bit, then refreshing to see if time slots still there.')
-        time.sleep(conf['time_found_refresh_wait'])
+        time.sleep(int(conf['time_found_refresh_wait']))
         driver.refresh()
         num_refreshes += 1
     else:
       # if no time slots, reset found flag, sleep, then refresh page.
       found_during_previous_iteration = False
-      time.sleep(conf['time_refresh_wait'])
+      time.sleep(int(conf['time_refresh_wait']))
       driver.refresh()
       num_refreshes += 1
-      if conf['emit_debug_msg']:
+      if conf.getboolean('emit_debug_msg'):
         print('Refreshed at ' + current_time() + '. count = ' + str(num_refreshes))
   driver.close()
   driver.quit()
-  if conf['emit_debug_msg']:
+  if conf.getboolean('emit_debug_msg'):
     print('Found open time slots at ' + current_time() + ':')
     for time_slot in time_slot_list:
       print(time_slot)

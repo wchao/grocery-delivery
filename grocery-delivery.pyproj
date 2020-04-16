@@ -25,6 +25,7 @@
     <Compile Include="freshdirect_slot_chrome.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="freshdirect_slot.ini" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
