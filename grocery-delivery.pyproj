@@ -26,6 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="freshdirect_slot.ini" />
+    <Content Include="README.md" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
