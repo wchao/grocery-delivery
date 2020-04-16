@@ -23,6 +23,22 @@ The script works on **Chrome**.
 
 > __Screen 1__
 ![FreshDirect Chrome in action](https://github.com/wchao/grocery-delivery/blob/master/doc/img/freshdirect_slot_chrome_in_action.png)
+> __Screen 2__
+This is what an email alert looks like:
+
+-----Original Message-----
+From: abc@xyz.com
+Sent: Thursday, April 16, 2020 12:42 PM
+To: John Smith <smith@yahoo.com>
+Subject: FreshDirect delivery time slot available
+
+FreshDirect delivery time slots opened up at 2020-04-16 12:41:26:
+Apr 19 6 am - 9 am
+Apr 19 9 am - 12 pm
+Apr 19 12 pm - 2 pm
+Apr 19 2 pm - 5 pm
+Apr 19 5 pm - 8 pm
+Apr 19 8 pm - 10 pm
 
 ## Requests
 
