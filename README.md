@@ -24,6 +24,7 @@ The script works on **Chrome**.
 > __Screen 1__
 ![FreshDirect Chrome in action](https://github.com/wchao/grocery-delivery/blob/master/doc/img/freshdirect_slot_chrome_in_action.png)
 > __Screen 2__
+```
 This is what an email alert looks like:
 
 -----Original Message-----
@@ -39,6 +40,7 @@ Apr 19 12 pm - 2 pm
 Apr 19 2 pm - 5 pm
 Apr 19 5 pm - 8 pm
 Apr 19 8 pm - 10 pm
+```
 
 ## Requests
 
