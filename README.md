@@ -60,3 +60,4 @@ Apr 19 8 pm - 10 pm
 
 * [Pooja Ahuja's Whole Foods delivery slot script](https://github.com/pcomputo/Whole-Foods-Delivery-Slot)
 * [Build a Bot to Get Notifications for Available Delivery Slots on Amazon Fresh](https://medium.com/better-programming/build-amazonfresh-delivery-slot-alerts-c9e12a429e23)
+* [Amazon Fresh Whole Foods delivery slot finder for Mac](https://github.com/ahertel/Amazon-Fresh-Whole-Foods-delivery-slot-finder)
