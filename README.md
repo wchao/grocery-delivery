@@ -74,11 +74,11 @@ Apr 19 8 pm - 10 pm
 
 ## Requests
 
-1. Need much better documentation for how to install and configure. In particular, add structure and format of freshdirect_slot.ini.
+1. Need better documentation for how to install and configure.
 2. Write Chrome extension so that users don't have to install Python locally and run the script from the command line.
 3. Add easy to use email and SMS server so that users don't have to set up their own. Maybe add Microsoft Outlook integration so that users can send email alerts to themselves using Outlook? Pretty easy to do on Windows with pywin32 and would eliminate need for separate mail server.
 4. Add ability to check out and pay for order, in addition to current alerting capability. That way user doesn't have to wake up or do anything in response to an alert. The program will just place the order when a slot comes available.
-5. Add Amazon Fresh (maybe other delivery platforms like Peapod, Instacart, Shipt, Walmart?).
+5. Add Amazon Fresh (maybe also other delivery services like Peapod, Instacart, Shipt, Walmart, Postmates?).
 6. Super order portal where user can specify what groceries they want, and the software places an order from the first available delivery service that has that basket of goods? This seems very ambitious and lots of things to figure out, but the benefit is that it is useful even after pandemic is over because there are out of stock items all the time at various grocers, and there will always be logistical issues with one delivery service being able to deliver sooner than another.
 7. Maybe write Android and iOS apps?
 
