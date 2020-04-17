@@ -1,5 +1,6 @@
 - [Grocery Delivery Software](#grocery-delivery-software)
   * [Usage](#usage)
+    + [Installation](#installation)
     + [Configuration](#configuration)
   * [Screenshots](#screenshots)
   * [Requests](#requests)
@@ -12,13 +13,17 @@ Like many people during COVID-19, I spend lots of time trying to reserve a deliv
 
 ## Usage
 
-Supports **MacOS, Linux, and Windows**.
+Supports **MacOS, Linux, and Windows** (theoretically, though Windows is currently the only tested platform).
 
-The script works on **Chrome**.
+The script works on **Chrome**. Add Firefox if enough demand for it.
+
+### Installation
 
 1. Clone the project.
-1. Run the requirements.txt (```$ pip install -r requirements.txt```).
-2. Run freshdirect_slot_chrome.py (``` $ python freshdirect_slot_chrome.py```).
+2. Install Python 3 if you don't already have it.
+3. Install required Python modules using requirements.txt (```pip install -r requirements.txt```).
+4. Create freshdirect_slot.ini configuration file using the template below in the Configuration section.
+5. Run freshdirect_slot_chrome.py (```python freshdirect_slot_chrome.py```).
 
 ### Configuration
 
@@ -80,7 +85,8 @@ Apr 19 8 pm - 10 pm
 4. Add ability to check out and pay for order, in addition to current alerting capability. That way user doesn't have to wake up or do anything in response to an alert. The program will just place the order when a slot comes available.
 5. Add Amazon Fresh (maybe also other delivery services like Peapod, Instacart, Shipt, Walmart, Postmates?).
 6. Super order portal where user can specify what groceries they want, and the software places an order from the first available delivery service that has that basket of goods? This seems very ambitious and lots of things to figure out, but the benefit is that it is useful even after pandemic is over because there are out of stock items all the time at various grocers, and there will always be logistical issues with one delivery service being able to deliver sooner than another.
-7. Maybe write Android and iOS apps?
+7. Perhaps add Firefox extension.
+8. Maybe write Android and iOS apps?
 
 ## Issues
 
