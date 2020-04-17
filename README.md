@@ -9,7 +9,7 @@
 
 # Grocery delivery software
 
-Like many people during COVID-19, I spend lots of time trying to reserve a delivery time slot on grocery delivery sites (FreshDirect, Amazon Fresh, Instacart). I wrote this software so I could get a time slot without sitting around refreshing the page for hours.
+Like many people during COVID-19 who use grocery delivery services, I spend lots of time trying to reserve a delivery time slot on grocery delivery sites (FreshDirect, Amazon Fresh, Instacart). I wrote this software so I could get a time slot without sitting around refreshing the page for hours.
 
 ## Usage
 
@@ -52,7 +52,7 @@ email_to = smith@yahoo.com
 page_dump_dir = C:\Users\jsmith\Documents
 ```
 
-Replace the values of user_data_dir, smtp_server, smtp_username, smtp_password, email_from, email_to, and page_dump_dir. For user_data_dir and page_dump_dir, the default Windows directory structure would be C:\Users\<logon name>, so just replace jsmith with your logon name. The current version of the script requires that you have access to an email server (SMTP server) that authenticates with a username and password.
+Replace the values of user_data_dir, smtp_server, smtp_username, smtp_password, email_from, email_to, and page_dump_dir. For user_data_dir and page_dump_dir, the default Windows directory structure would be C:\\Users\\<logon name>, so just replace jsmith with your logon name. The current version of the script requires that you have access to an email server (SMTP server) that authenticates with a username and password. Hopefully will add a feature to send mail without requiring the user to set up his own mail server soon.
 
 ## Screenshots
 
@@ -82,7 +82,7 @@ Apr 19 8 pm - 10 pm
 1. Need better documentation for how to install and configure.
 2. Write Chrome extension so that users don't have to install Python locally and run the script from the command line.
 3. Add easy to use email and SMS server so that users don't have to set up their own. Maybe add Microsoft Outlook integration so that users can send email alerts to themselves using Outlook? Pretty easy to do on Windows with pywin32 and would eliminate need for separate mail server.
-4. Add ability to check out and pay for order, in addition to current alerting capability. That way user doesn't have to wake up or do anything in response to an alert. The program will just place the order when a slot comes available.
+4. Add ability to check out and pay for order, in addition to current alerting capability. That way user doesn't have to wake up or do anything in response to an alert. The program will just place the order when a slot comes available. This would be useful when time slots open up in the middle of the night. I'm sure some people stay up late to get time slots.
 5. Add Amazon Fresh (maybe also other delivery services like Peapod, Instacart, Shipt, Walmart, Postmates?).
 6. Super order portal where user can specify what groceries they want, and the software places an order from the first available delivery service that has that basket of goods? This seems very ambitious and lots of things to figure out, but the benefit is that it is useful even after pandemic is over because there are out of stock items all the time at various grocers, and there will always be logistical issues with one delivery service being able to deliver sooner than another.
 7. Perhaps add Firefox extension.
