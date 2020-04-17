@@ -1,5 +1,6 @@
 - [Grocery Delivery Software](#grocery-delivery-software)
   * [Usage](#usage)
+    + [Configuration](#configuration)
   * [Screenshots](#screenshots)
   * [Requests](#requests)
   * [Issues](#issues)
@@ -18,6 +19,35 @@ The script works on **Chrome**.
 1. Clone the project.
 1. Run the requirements.txt (```$ pip install -r requirements.txt```).
 2. Run freshdirect_slot_chrome.py (``` $ python freshdirect_slot_chrome.py```).
+
+### Configuration
+
+Create a freshdirect_slot.ini configuration file in the same directory that you put freshdirect_slot_chrome.py and adhering to the following template:
+
+```
+[freshdirect]
+emit_debug_msg = True
+user_data_dir = C:\Users\jsmith\AppData\Local\Google\Chrome\User Data
+user_agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36
+# after this number of refreshes, restart Chrome to deal with memory leaks and resource accumulation.
+max_iterations_before_restart = 120
+time_refresh_wait = 60
+# after time slots are found, wait this amount of time to refresh the page to get all the time slots.
+# sometimes the time slots are added over a few seconds, and the initial page load only catches a few.
+# waiting a few seconds and then refreshing helps pick up all the available time slots.
+time_found_refresh_wait = 30
+smtp_server = mailserverhostname
+smtp_username = mailserverusername
+smtp_password = mailserverpassword
+# email alerts come from this email. ensure that your mail server allows this, and that you have SPF and DKIM set up.
+email_from = freshdirect_alert@mymailserver.com
+# send email alerts to this email address. can be multiple emails separated by commas.
+email_to = smith@yahoo.com
+# where to dump HTML files. 
+page_dump_dir = C:\Users\jsmith\Documents
+```
+
+Replace the values of user_data_dir, smtp_server, smtp_username, smtp_password, email_from, email_to, and page_dump_dir. For user_data_dir and page_dump_dir, the default Windows directory structure would be C:\Users\<logon name>, so just replace jsmith with your logon name. The current version of the script requires that you have access to an email server (SMTP server) that authenticates with a username and password.
 
 ## Screenshots
 
