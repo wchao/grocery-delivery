@@ -55,6 +55,7 @@ Apr 19 8 pm - 10 pm
 ## Issues
 
 1. I am a FreshDirect Chef's Table customer, so I built the code in that environment. Does the reserve time slot page work if you are not Chef's Table? I don't know, but happy to work with someone who is not Chef's Table to troubleshoot and get it working in that environment.
+2. If you get the error "PermissionError: [Errno 13] Permission denied: 'C:\\Users\\wchao\\.wdm\\drivers\\chromedriver\\81.0.4044.69\\win32\\chromedriver.exe'", then it probably means chromedriver.exe is still running and has a lock on the file that prevents it from being overwritten with the newest version. To fix this, start Task Manager and find the chromedriver process and right click and choose "End task". Then you should be able to run the freshdirect_slot_chrome.py program.
 
 ## References
 
