@@ -52,7 +52,7 @@ email_to = smith@yahoo.com
 page_dump_dir = C:\Users\jsmith\Documents
 ```
 
-Replace the values of user_data_dir, smtp_server, smtp_username, smtp_password, email_from, email_to, and page_dump_dir. For user_data_dir and page_dump_dir, the default Windows directory structure would be C:\\Users\\<logon name>, so just replace jsmith with your logon name. The current version of the script requires that you have access to an email server (SMTP server) that authenticates with a username and password. Hopefully will add a feature to send mail without requiring the user to set up his own mail server soon.
+Replace the values of user_data_dir, smtp_server, smtp_username, smtp_password, email_from, email_to, and page_dump_dir. For user_data_dir and page_dump_dir, the default Windows directory structure would be C:\\Users\\logon_name, so just replace jsmith with your logon name. The current version of the script requires that you have access to an email server (SMTP server) that authenticates with a username and password. Hopefully will add a feature to send mail without requiring the user to set up his own mail server soon.
 
 ## Screenshots
 
